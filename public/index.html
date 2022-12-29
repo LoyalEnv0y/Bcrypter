@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Çetin Tekin">
+	<meta name="description" content="A helpful site to encode and decode bcrypt hashes.">
+	<meta name="keywords" content="bcrypt, generator, privacy, encode, decode">
+
+	<title>Bcrypter | Encode and Check</title>
+
+	<!-- BootStrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="container" class="flex-column">
+
+		<header id="navbar" class="border-5 shadow-secondary flex">
+			<div id="logo-container" class="border-4 flex">
+				<a href="index.html">
+					<img id="logo-img" src="../imgs/Pigeon-2.png" alt="logo">
+				</a>
+				<div id="logo-description" class="flex-column">
+					<span id="logo-title">Bcrypter</span>
+					<span id="logo-slogan">Keep it safe</span>
+				</div>
+			</div>
+
+			<nav id="nav-links" class="flex">
+				<a href="" class="nav-item">Lorem</a>
+				<a href="" class="nav-item">Lorem</a>
+				<a href="" class="nav-item">Lorem</a>
+				<a href="" class="nav-item">Lorem</a>
+				<a href="" class="nav-item">Lorem</a>
+			</nav>
+		</header>
+
+		<main class="border-5 shadow-secondary">
+			<div id="panels" class="flex">
+				<div id="encode-panel" class="panel flex-column">
+					<div class="panel-banner">
+						<h1 class="panel-title">Encode</h1>
+					</div>
+
+					<p class="panel-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+						obcaecati
+						mollitia aperiam possimus sapiente eligendi laboriosam, illum culpa rem earum unde maxime. Rem
+						repudiandae
+						repellat saepe alias vero recusandae magni.
+					</p>
+
+					<div id="encode-alert" class="alert alert-success flex hide">
+						<span class="code-index index-success">></span>
+					</div>
+
+					<form>
+						<div class="input-group">
+							<label for="string" class="input-group-text">String &#10140;</label>
+							<textarea class="form-control" id="encode-string" rows="7"></textarea>
+						</div>
+
+						<div class="menu flex">
+							<div id="rounds-selector">
+								<label for="rounds" id="rounds-label">Rounds</label>
+								<div class="btn-group" role="group" aria-label="Basic example">
+									<button id="decrement-btn" type="button" class="btn btn-secondary">-</button>
+									<input id="rounds" value="12" type="number"></input>
+									<button id="increment-btn" type="button" class="btn btn-secondary">+</button>
+								</div>
+							</div>
+
+							<button id="encode-btn" type="submit" class="btn btn-primary">Encode</button>
+						</div>
+
+						<div id="rounds-warning" class="alert alert-warning mt-3 hide" role="alert">
+						</div>
+					</form>
+				</div>
+
+				<div id="separator"></div>
+
+				<div id="check-panel" class="panel flex-column">
+					<div class="panel-banner">
+						<h1 class="panel-title">Check</h1>
+					</div>
+
+					<p class="panel-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
+						obcaecati
+						mollitia aperiam possimus sapiente eligendi laboriosam, illum culpa rem earum unde maxime. Rem
+						repudiandae
+						repellat saepe alias vero recusandae magni.
+					</p>
+
+					<div id="check-alert" class="alert alert-success flex hide">
+						<span class="code-index index-success">></span>
+					</div>
+
+
+					<form>
+						<div id="hash-input-area" class="input-group">
+							<label for="hash" class="input-group-text">Hash &#10140;</label>
+							<textarea class="form-control" id="hash" rows="2"></textarea>
+						</div>
+
+						<div class="input-group">
+							<label for="string" class="input-group-text">String &#10140;</label>
+							<textarea class="form-control" id="check-string" rows="4"></textarea>
+						</div>
+
+						<button id="check-btn" type="submit" class="btn btn-primary">Check</button>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<footer class="border-5">
+		</footer>
+	</div>
+
+	<!-- BootStrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+		</script>
+
+	<!-- Custom JS -->
+	<script src="../src/index.js"></script>
+</body>
+
+</html>
