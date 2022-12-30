@@ -4,7 +4,8 @@
     "description": "A simple Bcrypting website I made for my school project.",
     "main": "index.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack"
     },
     "repository": {
         "type": "git",
@@ -23,9 +24,5 @@
     "license": "MIT",
     "dependencies": {
         "bcrypt": "^5.1.0"
-    },
-    "devDependencies": {
-        "webpack": "^5.75.0",
-        "webpack-cli": "^5.0.1"
     }
 }

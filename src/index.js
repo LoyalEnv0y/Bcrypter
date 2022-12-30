@@ -1,5 +1,4 @@
 // Including the bcrypt package with node.
-import { hashSync } from 'bcrypt';
 
 // Divs
 const roundsSelector = document.querySelector('#rounds-selector');
@@ -88,7 +87,4 @@ encodeBtn.addEventListener('click', (evt) => {
 
     const saltRounds = rounds.value;
     const string = encodeString.value;
-
-    const hash = hashSync(saltRounds, string);
-    console.log(hash);
 });
