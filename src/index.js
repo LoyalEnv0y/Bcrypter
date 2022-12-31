@@ -1,4 +1,5 @@
-// Including the bcrypt package with node.
+// Including the bcryptjs package with node.
+const bcrypt = require('bcryptjs');
 
 // Divs
 const roundsSelector = document.querySelector('#rounds-selector');
@@ -8,13 +9,17 @@ const encodeAlert = document.querySelector('#encode-alert');
 const checkAlert = document.querySelector('#check-alert');
 const roundsWarning = document.querySelector('#rounds-warning');
 
+// AlertValues
+const encodeHashValue = document.querySelector('#encode-hash-value');
+const checkHashValue = document.querySelector('#check-hash-value');
+
 // TextAreas
 const encodeString = document.querySelector('#encode-string');
 const checkString = document.querySelector('#check-string');
 const checkHash = document.querySelector('#hash');
 
-// Labels
-const roundsLabel = document.querySelector('#rounds-label');
+// CodeIndex
+const checkCodeIndex = document.querySelector('#check-code-index')
 
 // Inputs
 const rounds = document.querySelector('#rounds');
@@ -87,4 +92,37 @@ encodeBtn.addEventListener('click', (evt) => {
 
     const saltRounds = rounds.value;
     const string = encodeString.value;
+
+    bcrypt.genSalt(parseInt(saltRounds), (err, salt) => {
+        bcrypt.hash(string, salt, (err, hash) => {
+            encodeHashValue.innerText = hash;
+        });
+    });
+
+    encodeAlert.classList.remove('hide');
+});
+
+checkBtn.addEventListener('click', (evt) => {
+    evt.preventDefault();
+
+    const hash = checkHash.value;
+    const string = checkString.value;
+
+    bcrypt.compare(string, hash, (err, result) => {
+        if (result) {
+            checkAlert.classList.remove('alert-danger');
+            checkCodeIndex.classList.remove('index-danger');
+            checkAlert.classList.add('alert-success');
+            checkCodeIndex.classList.add('index-success');
+            checkHashValue.innerText = 'Match!';
+        } else {
+            checkAlert.classList.remove('alert-success');
+            checkCodeIndex.classList.remove('index-success');
+            checkAlert.classList.add('alert-danger');
+            checkCodeIndex.classList.add('index-danger');
+            checkHashValue.innerText = 'Failed to Match!';
+        }
+    });
+
+    checkAlert.classList.remove('hide');
 });
