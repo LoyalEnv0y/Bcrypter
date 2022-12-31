@@ -26,7 +26,7 @@
 		<header id="navbar" class="border-5 shadow-secondary flex">
 			<div id="logo-container" class="border-4 flex">
 				<a href="index.html">
-					<img id="logo-img" src="../imgs/Pigeon-2.png" alt="logo">
+					<img class="logo-img" src="../imgs/Pigeon-2.png" alt="logo">
 				</a>
 				<div id="logo-description" class="flex-column">
 					<span id="logo-title">Bcrypter</span>
@@ -35,11 +35,11 @@
 			</div>
 
 			<nav id="nav-links" class="flex">
-				<a href="" class="nav-item">Lorem</a>
-				<a href="" class="nav-item">Lorem</a>
-				<a href="" class="nav-item">Lorem</a>
-				<a href="" class="nav-item">Lorem</a>
-				<a href="" class="nav-item">Lorem</a>
+				<a href="index.html" class="nav-item">Home</a>
+				<a href="" class="nav-item">Morse</a>
+				<a href="" class="nav-item">Donate</a>
+				<a href="" class="nav-item">Help</a>
+				<a href="" class="nav-item">Contact</a>
 			</nav>
 		</header>
 
@@ -50,15 +50,16 @@
 						<h1 class="panel-title">Encode</h1>
 					</div>
 
-					<p class="panel-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
-						obcaecati
-						mollitia aperiam possimus sapiente eligendi laboriosam, illum culpa rem earum unde maxime. Rem
-						repudiandae
-						repellat saepe alias vero recusandae magni.
-					</p>
+					<div class="description-container">
+						<p class="panel-description">Write a text below to start encoding. You can change how many rounds
+							you want to encode the text for. The higher the round number the slower it will get to finish
+							encoding. We use salting by default.
+						</p>
+					</div>
 
 					<div id="encode-alert" class="alert alert-success flex hide">
 						<span class="code-index index-success">></span>
+						<p id="encode-hash-value"></p>
 					</div>
 
 					<form>
@@ -92,17 +93,16 @@
 						<h1 class="panel-title">Check</h1>
 					</div>
 
-					<p class="panel-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus
-						obcaecati
-						mollitia aperiam possimus sapiente eligendi laboriosam, illum culpa rem earum unde maxime. Rem
-						repudiandae
-						repellat saepe alias vero recusandae magni.
-					</p>
-
-					<div id="check-alert" class="alert alert-success flex hide">
-						<span class="code-index index-success">></span>
+					<div class="description-container">
+						<p class="panel-description">Enter the encoded hash you want to check at the hash area and enter the
+							text you want to check against in the string area. 
+						</p>
 					</div>
 
+					<div id="check-alert" class="alert flex hide">
+						<span class="code-index" id="check-code-index">></span>
+						<p id="check-hash-value"></p>
+					</div>
 
 					<form>
 						<div id="hash-input-area" class="input-group">
@@ -122,6 +122,43 @@
 		</main>
 
 		<footer class="border-5">
+			<img src="../imgs/pigeon-2.png" alt="logo" id="footer-logo" class="logo-img">
+
+			<section id="footer-legend">
+				<ul class="footer-list">
+					<li class="footer-li">Cryptography</li>
+					<li class="footer-li">Pre-sale faqs</li>
+					<li class="footer-li">Submit a ticket</li>
+				</ul>
+	
+				<ul class="footer-list">
+					<li class="footer-li">Services</li>
+					<li class="footer-li">Quest of the week</li>
+				</ul>
+	
+				<ul class="footer-list">
+					<li class="footer-li">Showcase</li>
+					<li class="footer-li">Widget-kit</li>
+					<li class="footer-li">support</li>
+				</ul>
+	
+				<ul class="footer-list">
+					<li class="footer-li">about us</li>
+					<li class="footer-li">contact</li>
+					<li class="footer-li">rescore</li>
+					<li class="footer-li">developers</li>
+				</ul>
+			</section>
+
+			<section id="footer-links">
+				<a class="footer-link" href="https://www.youtube.com/"></a>
+				<a class="footer-link" href="https://twitter.com/home"></a>
+				<a class="footer-link" href="https://www.twitch.tv/"></a>
+				<a class="footer-link" href="https://www.reddit.com/"></a>
+				<a class="footer-link" href="https://www.facebook.com/"></a>
+
+				<p>&#169;Copyright. All rights reserved.</p>
+			</section>
 		</footer>
 	</div>
 
@@ -131,7 +168,7 @@
 		</script>
 
 	<!-- Custom JS -->
-	<script src="../src/index.js"></script>
+	<script src="../src/bundle.js"></script>
 </body>
 
 </html>
