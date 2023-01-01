@@ -410,3 +410,21 @@ footer {
     }
 }
 
+@media screen and (max-width: 1530px) {
+    .alert {
+        font-size: 0.8em;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1245px) {
+    .alert {
+        font-size: 0.7em;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .alert {
+        font-size: 0.6em;
+    }
+}
