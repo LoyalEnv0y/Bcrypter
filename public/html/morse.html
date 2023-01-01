@@ -19,7 +19,7 @@
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/morse.css">
-	
+
 	<!-- BootStrap Icons -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
@@ -55,17 +55,26 @@
 					</div>
 
 					<div class="description-container">
-						<p class="panel-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptatum iste vitae impedit hic a eos nam explicabo corporis ipsa, natus maiores iure, saepe minima voluptates quisquam dolores? Adipisci, unde!
+						<p class="panel-description">Enter the text you want to translate from latin to morse. Words
+							will be separated with a '/' character
 						</p>
 					</div>
 
 					<form>
 						<div class="input-group">
-							<label for="string" class="input-group-text">String &#10140;</label>
-							<textarea class="form-control" id="encode-string" rows="12"></textarea>
+							<label for="string" class="input-group-text">Plain Text &#10140;</label>
+							<textarea class="form-control" id="encode-string" rows="8"></textarea>
 						</div>
 
 						<button id="encode-btn" type="submit" class="btn btn-primary">Encode</button>
+
+						<div id="encode-warning" class="alert alert-warning hide" role="alert">
+							<p id="encode-warning-desc"></p>
+							<hr>
+							<p class="mb-0">We encoded your text but it doesn't contain the invalid characters. You can
+								check your text and try again. 👍
+							</p>
+						</div>
 					</form>
 				</div>
 
@@ -77,18 +86,27 @@
 					</div>
 
 					<div class="description-container">
-						<p class="panel-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error vitae assumenda voluptates blanditiis explicabo quo deleniti illo officiis sit repellat, sed dolore, alias nihil ex! Id fugiat excepturi sit. Consequatur!
+						<p class="panel-description">Please enter the code you want to translate to. Separate letters by
+							spaces and words by '/' character.
 						</p>
 					</div>
 
 					<form>
 
 						<div class="input-group">
-							<label for="string" class="input-group-text">String &#10140;</label>
-							<textarea class="form-control" id="decode-string" rows="12"></textarea>
+							<label for="string" class="input-group-text">Encoded &#10140;</label>
+							<textarea class="form-control" id="decode-string" rows="8"></textarea>
 						</div>
 
 						<button id="decode-btn" type="submit" class="btn btn-primary">Decode</button>
+
+						<div id="decode-warning" class="alert alert-warning hide" role="alert">
+							<p id="decode-warning-desc"></p>
+							<hr>
+							<p class="mb-0">We decoded your morse but it doesn't contain the invalid characters. You can
+								check your code and try again. 👍
+							</p>
+						</div>
 					</form>
 				</div>
 			</div>
@@ -147,7 +165,7 @@
 		</script>
 
 	<!-- Custom JS -->
-	<script src="../../src/bundle.js"></script>
+	<script src="../../src/morse.js"></script>
 </body>
 
 </html>

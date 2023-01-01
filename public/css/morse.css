@@ -1,4 +1,13 @@
 .btn {
     margin-top: 15px;
-    padding: 10px 15px;
+    padding: 10px 25px;
+}
+
+.alert {
+    margin-top: 20px;
+    height: auto;
+}
+
+.panel-description {
+    margin-bottom: 50px;
 }
