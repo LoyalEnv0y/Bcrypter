@@ -18,6 +18,9 @@
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="style.css">
+
+	<!-- BootStrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 
 <body>
@@ -51,8 +54,10 @@
 					</div>
 
 					<div class="description-container">
-						<p class="panel-description">Write a text below to start encoding. You can change how many rounds
-							you want to encode the text for. The higher the round number the slower it will get to finish
+						<p class="panel-description">Write a text below to start encoding. You can change how many
+							rounds
+							you want to encode the text for. The higher the round number the slower it will get to
+							finish
 							encoding. We use salting by default.
 						</p>
 					</div>
@@ -94,8 +99,9 @@
 					</div>
 
 					<div class="description-container">
-						<p class="panel-description">Enter the encoded hash you want to check at the hash area and enter the
-							text you want to check against in the string area. 
+						<p class="panel-description">Enter the encoded hash you want to check at the hash area and enter
+							the
+							text you want to check against in the string area.
 						</p>
 					</div>
 
@@ -121,43 +127,49 @@
 			</div>
 		</main>
 
-		<footer class="border-5">
-			<img src="../imgs/pigeon-2.png" alt="logo" id="footer-logo" class="logo-img">
+		<footer class="border-5 flex-column">
+			<section id="footer-main" class="flex">
+				<div id="location-area">
+					<h4 class="footer-title">Our Office</h4>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5648.563978939359!2d-121.96494562103601!3d37.38631313325536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc993ddaaaaab%3A0xa49238ea001d1349!2sIntel%20SC9!5e0!3m2!1sen!2str!4v1672566165531!5m2!1sen!2str"
+						width="300" height="200" style="border:0;" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<p class="footer-paragraph">t: +123 456 789</p>
+					<p class="footer-paragraph">1234 Main Street San Francisco</p>
+				</div>
 
-			<section id="footer-legend">
-				<ul class="footer-list">
-					<li class="footer-li">Cryptography</li>
-					<li class="footer-li">Pre-sale faqs</li>
-					<li class="footer-li">Submit a ticket</li>
-				</ul>
-	
-				<ul class="footer-list">
-					<li class="footer-li">Services</li>
-					<li class="footer-li">Quest of the week</li>
-				</ul>
-	
-				<ul class="footer-list">
-					<li class="footer-li">Showcase</li>
-					<li class="footer-li">Widget-kit</li>
-					<li class="footer-li">support</li>
-				</ul>
-	
-				<ul class="footer-list">
-					<li class="footer-li">about us</li>
-					<li class="footer-li">contact</li>
-					<li class="footer-li">rescore</li>
-					<li class="footer-li">developers</li>
-				</ul>
+				<div class="hiring">
+					<h4 class="footer-title">Say Hello</h4>
+					<p class="footer-paragraph">If you are interested in working with us or just want to say hello,
+						simply drop us a line!</p>
+					<p id="hire-email">hiring@bcrypt.com</p>
+				</div>
+
+				<div class="subscription">
+					<h4 class="footer-title">Subscribe us</h4>
+
+					<div id="social-links">
+						<a class="footer-link" href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>
+						<a class="footer-link" href="https://twitter.com/home"><i class="bi bi-twitter"></i></a>
+						<a class="footer-link" href="https://www.twitch.tv/"><i class="bi bi-twitch"></i></a>
+						<a class="footer-link" href="https://www.reddit.com/"><i class="bi bi-reddit"></i></a>
+						<a class="footer-link" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+					</div>
+
+					<input id="email-reg" type="email" placeholder="YOUR EMAIL" name="email">
+					<button id="email-submit" type="submit">Submit</button>
+				</div>
 			</section>
 
-			<section id="footer-links">
-				<a class="footer-link" href="https://www.youtube.com/"></a>
-				<a class="footer-link" href="https://twitter.com/home"></a>
-				<a class="footer-link" href="https://www.twitch.tv/"></a>
-				<a class="footer-link" href="https://www.reddit.com/"></a>
-				<a class="footer-link" href="https://www.facebook.com/"></a>
+			<section id="footer-nav" class="flex border-4">
+				<a class="footer-nav-item" href="https://www.youtube.com/">Home</a>
+				<a class="footer-nav-item" href="#features">Features</a>
+				<a class="footer-nav-item" href="#page_layouts">Page Layouts</a>
+				<a class="footer-nav-item" href="#pages">Pages</a>
+				<a class="footer-nav-item" href="#store">Store</a>
 
-				<p>&#169;Copyright. All rights reserved.</p>
+				<p id="copyright-text">&#169;Copyright. All rights reserved.</p>
 			</section>
 		</footer>
 	</div>
