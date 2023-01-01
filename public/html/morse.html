@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Çetin Tekin">
+	<meta name="description" content="A helpful site to encode and decode bcrypt hashes.">
+	<meta name="keywords" content="bcrypt, generator, privacy, encode, decode">
+
+	<title>Bcrypter | Morse | Encode/Decode</title>
+
+	<!-- BootStrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/morse.css">
+	
+	<!-- BootStrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+</head>
+
+<body>
+	<div id="container" class="flex-column">
+
+		<header id="navbar" class="border-5 shadow-secondary flex">
+			<div id="logo-container" class="border-4 flex">
+				<a href="index.html">
+					<img class="logo-img" src="../../imgs/Pigeon-2.png" alt="logo">
+				</a>
+				<div id="logo-description" class="flex-column">
+					<span id="logo-title">Bcrypter</span>
+					<span id="logo-slogan">Keep it safe</span>
+				</div>
+			</div>
+
+			<nav id="nav-links" class="flex">
+				<a href="index.html" class="nav-item">Home</a>
+				<a href="morse.html" class="nav-item featured">Morse</a>
+				<a href="" class="nav-item">Donate</a>
+				<a href="" class="nav-item">Help</a>
+				<a href="" class="nav-item">Contact</a>
+			</nav>
+		</header>
+
+		<main class="border-5 shadow-secondary">
+			<div id="panels" class="flex">
+				<div id="encode-panel" class="panel flex-column">
+					<div class="panel-banner">
+						<h1 class="panel-title">Encode</h1>
+					</div>
+
+					<div class="description-container">
+						<p class="panel-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta voluptatum iste vitae impedit hic a eos nam explicabo corporis ipsa, natus maiores iure, saepe minima voluptates quisquam dolores? Adipisci, unde!
+						</p>
+					</div>
+
+					<form>
+						<div class="input-group">
+							<label for="string" class="input-group-text">String &#10140;</label>
+							<textarea class="form-control" id="encode-string" rows="12"></textarea>
+						</div>
+
+						<button id="encode-btn" type="submit" class="btn btn-primary">Encode</button>
+					</form>
+				</div>
+
+				<div id="separator"></div>
+
+				<div id="decode-panel" class="panel flex-column">
+					<div class="panel-banner">
+						<h1 class="panel-title">decode</h1>
+					</div>
+
+					<div class="description-container">
+						<p class="panel-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error vitae assumenda voluptates blanditiis explicabo quo deleniti illo officiis sit repellat, sed dolore, alias nihil ex! Id fugiat excepturi sit. Consequatur!
+						</p>
+					</div>
+
+					<form>
+
+						<div class="input-group">
+							<label for="string" class="input-group-text">String &#10140;</label>
+							<textarea class="form-control" id="decode-string" rows="12"></textarea>
+						</div>
+
+						<button id="decode-btn" type="submit" class="btn btn-primary">Decode</button>
+					</form>
+				</div>
+			</div>
+		</main>
+
+		<footer class="border-5 flex-column">
+			<section id="footer-main" class="flex">
+				<div id="location-area">
+					<h4 class="footer-title">Our Office</h4>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5648.563978939359!2d-121.96494562103601!3d37.38631313325536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fc993ddaaaaab%3A0xa49238ea001d1349!2sIntel%20SC9!5e0!3m2!1sen!2str!4v1672566165531!5m2!1sen!2str"
+						width="300" height="200" style="border:0;" loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+					<p class="footer-paragraph">t: +123 456 789</p>
+					<p class="footer-paragraph">1234 Main Street San Francisco</p>
+				</div>
+
+				<div class="hiring">
+					<h4 class="footer-title">Say Hello</h4>
+					<p class="footer-paragraph">If you are interested in working with us or just want to say hello,
+						simply drop us a line!</p>
+					<p id="hire-email">hiring@bcrypt.com</p>
+				</div>
+
+				<div class="subscription">
+					<h4 class="footer-title">Subscribe us</h4>
+
+					<div id="social-links">
+						<a class="footer-link" href="https://www.youtube.com/"><i class="bi bi-youtube"></i></a>
+						<a class="footer-link" href="https://twitter.com/home"><i class="bi bi-twitter"></i></a>
+						<a class="footer-link" href="https://www.twitch.tv/"><i class="bi bi-twitch"></i></a>
+						<a class="footer-link" href="https://www.reddit.com/"><i class="bi bi-reddit"></i></a>
+						<a class="footer-link" href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+					</div>
+
+					<input id="email-reg" type="email" placeholder="YOUR EMAIL" name="email">
+					<button id="email-submit" type="submit">Submit</button>
+				</div>
+			</section>
+
+			<section id="footer-nav" class="flex border-4">
+				<a class="footer-nav-item" href="index.html">Home</a>
+				<a class="footer-nav-item" href="#features">Features</a>
+				<a class="footer-nav-item" href="#page_layouts">Page Layouts</a>
+				<a class="footer-nav-item" href="#pages">Pages</a>
+				<a class="footer-nav-item" href="#store">Store</a>
+
+				<p id="copyright-text">&#169;Copyright. All rights reserved.</p>
+			</section>
+		</footer>
+	</div>
+
+	<!-- BootStrap JS -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+		</script>
+
+	<!-- Custom JS -->
+	<script src="../../src/bundle.js"></script>
+</body>
+
+</html>
