@@ -18,8 +18,6 @@ const encodeString = document.querySelector('#encode-string');
 const checkString = document.querySelector('#check-string');
 const checkHash = document.querySelector('#hash');
 
-// CodeIndex
-const checkCodeIndex = document.querySelector('#check-code-index')
 
 // Inputs
 const rounds = document.querySelector('#rounds');
@@ -111,15 +109,11 @@ checkBtn.addEventListener('click', (evt) => {
     bcrypt.compare(string, hash, (err, result) => {
         if (result) {
             checkAlert.classList.remove('alert-danger');
-            checkCodeIndex.classList.remove('index-danger');
             checkAlert.classList.add('alert-success');
-            checkCodeIndex.classList.add('index-success');
             checkHashValue.innerText = 'Match!';
         } else {
             checkAlert.classList.remove('alert-success');
-            checkCodeIndex.classList.remove('index-success');
             checkAlert.classList.add('alert-danger');
-            checkCodeIndex.classList.add('index-danger');
             checkHashValue.innerText = 'Failed to Match!';
         }
     });

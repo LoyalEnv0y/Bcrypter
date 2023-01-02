@@ -116,7 +116,7 @@ const decode = (encoded) => {
                 unknownChars.push(set);
                 continue;
             }
-            
+
             decoded += toLatin[set];
             set = '';
             continue;
